@@ -880,3 +880,33 @@ a {
     transform: rotate(-1turn);
   }
 }
+
+/* 📱 Móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .boton-texto h2 { font-size: 1.5rem; }
+  .boton-texto p { font-size: 0.9rem; }
+  .juegos-grid iframe {
+    height: 180px !important;
+  }
+}
+
+/* 📲 Tablets (entre 769px y 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .juegos-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .boton-texto h2 { font-size: 2.2rem; }
+  .boton-texto p { font-size: 1.2rem; }
+}
+
+/* 💻 Desktop grandes (desde 1440px) */
+@media (min-width: 1440px) {
+  .juegos-grid {
+    grid-template-columns: repeat(5, 1fr) !important;
+  }
+}
